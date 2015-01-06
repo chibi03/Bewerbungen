@@ -1,0 +1,295 @@
+\documentclass{article}
+\usepackage[
+  margin=1.5cm,
+  includefoot,
+  footskip=30pt,
+]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\definecolor{dark_grey}{gray}{0.6}
+\leftmargin=0.25cm
+\oddsidemargin=0.20in
+\textwidth=6.0in
+\topmargin=-0.6in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		%\scshape{\textbf{#1}}\\
+		\large \textsc{#1}\\
+		\vspace{-10pt}
+		\raggedright
+		\color{dark_grey}{\line(1,0){500}}
+		\smallskip
+	\end{changemargin}
+}
+
+\newcommand{\contact}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		%\begin
+			\raggedleft
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\\ \smallskip
+			{#5}\bigskip
+		%\end
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{0in}{0in}
+  }	
+	{
+\end{changemargin}
+\medskip
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+\newcommand{\para}[4]{
+	\begin{minipage}[t]{0.55\linewidth}
+	\textbf{#1},\\
+	\textit{#2}
+	#3\\
+	#4
+	\end{minipage}
+	%\smallskip
+}
+
+\newcommand{\paraW}[4]{
+	\begin{minipage}[t]{0.6\textwidth}
+	\textbf{#1}, #2, #3 \vspace{2pt}\\
+	\begin{tabular}{p{10cm}l}
+		#4
+	\end{tabular}
+	\end{minipage}
+	\medskip
+}
+
+\newcommand{\timerange}[1]{
+	\begin{minipage}[t]{0.30\textwidth}
+		#1
+	\end{minipage}
+}
+
+
+%\newcommand{\}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Samirah Akibu Amadu}{57 Whyteways, SO50 4NQ,\\ Eastleigh, UK}{Phone: 07774 809 158}{Email: amadu.samirah@yahoo.de}{LinkedIn: \href{http://uk.linkedin.com/pub/samirah-amadu/47/a8b/296/}{Samirah Amadu}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+%\header{Personal Statement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\timerange{September 2011 -  Present}
+	\para{BSc Computer Science with year in Industry}{University of Birmingham,}{UK\vspace{2pt}}{
+		Achieved a First in my first (83\%) and second (80\%) year\\
+	} \\
+
+	\timerange{September 2006 - June 2011}
+	\para{VET College}{Camillo Sitte Lehranstalt,}{Vienna, Austria}{
+		Graduated with Matura (A-level equivalent)\\
+	}
+
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Work-experience}
+
+\begin{body}
+	\vspace{14pt}
+	
+	\timerange{July 2013 - present}
+	\paraW{WebSphere Liberty Profile Software Development Intern}{IBM}{Hursley, UK}{
+		Developing Software to integrate Liberty Profile in multiple Cloud Solutions\\
+		Teaching English and German to Colleagues in IBM\\
+		Organising education for fellow interns in IBM UK, also proposed and carried out a new team structure to improve productivity
+	}\\
+	
+	\timerange{January 2013 - July 2013}
+	\paraW{Student Ambassador}{University of Birmingham}{Birmingham, UK}{
+		Coordinated students on campus tours
+		Actively encouraged female students to choose computer science as a degree by sharing my experiences
+	}\\
+	
+	%\textbf{Casual employee}, IT Services, University of Birmingham, UK \\
+	\timerange{April 2012 - October 2012}
+	\paraW{Part-time worker}{IT Services}{University of Birmingham, UK}{
+	%\begin{tabular}{l} %\itemsep -15pt  % reduce space between items
+		Researched and resolved a range of technical problems\\
+		Dealt with aggravated customers by showing consideration and a desire to help
+	%\end{tabular}
+	}\\
+
+	\timerange{August 2012}
+	\paraW{Sales assistant}{Haschahof}{Vienna, Austria}{
+	%\begin{tabular}{ll} %\itemsep -0pt  % reduce space between items
+		Maintained high standard of sales environment \\
+		Sale of organic vegetables, meat and drinks \\
+		Evaluated customers and recognised improvable sales approaches\\
+	%\end{tabular} \\
+	}
+	
+	\timerange{February 2012 - June 2012}
+	\paraW{Volunteer}{Barnardos}{Harborne, UK}{
+		Managed incoming and outgoing stock \\
+		Maintenance of computer and external devices\\
+		Trained in cash handling and till operation \\
+	}
+
+	\timerange{July 2012 \& September 2012}
+	\paraW{Trainee}{Ferro and Partner Civil Engineers}{Vienna, Austria}{
+		Handled enquiries and complaints regarding ongoing construction \\
+		Analysed requirements and designed matching facades \\
+	}
+
+	\timerange{June 2011 - September 2011}
+	\paraW{Promoter}{Mrs. Sporty}{Vienna, Austria}{
+		Communicated with potential customers to determine their needs \\
+		Trained in customer service and selling techniques \\
+		Worked in front of various branches greeting public and introducing Mrs. Spoty's fitness concept \\
+	}
+
+
+		\timerange{August 2011 - September 2011}
+	\paraW{Trainee}{Ferro and Partner Civil Engineers}{Vienna, Austria}{
+		Designed structural reinforcement plans within deadline \\
+		Supervised workers on construction sites, to keep track of work process \\
+		Kept track of quality on construction sites, to ensure quality standards were met\\
+	}
+
+\end{body}
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{Skills}
+
+\begin{body}
+	%\raggedleft
+	\vspace{14pt}
+	\hspace{-10pt}
+	\begin{tabular}{p{4.37cm}ll}
+		\scshape{ \textbf{Technical Skills}} &   \\
+		\begin{tabular}{l} 
+		Java \\
+		HTML/CSS\\
+		\LaTeX\\
+		SQL\\
+		Linux\\
+		Ruby\\
+		Ocaml\\
+		\end{tabular} 
+		
+		&
+		
+		\begin{tabular}{l} 
+		Excellent \\
+		Excellent\\
+		Intermediate\\
+		Intermediate\\
+		Intermediate\\
+		Intermediate\\
+		Intermediate\\
+		\end{tabular}\\
+
+	\hspace{-10pt}
+	\textsc{ \textbf{Languages}}\\
+		\begin{tabular}{p{4.5cm}lp{2cm}l}
+			English & Fluent (C2)\\
+			German & Mother tongue (C2)\\
+			Japanese & Basic (B2)\\
+		\end{tabular}\\
+	\end{tabular}
+\end{body}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+\header{Extracurricular Activities}
+
+\begin{body}
+	\vspace{14pt}
+	\timerange{January 2013 - June 2013}
+	\paraW{Green Impact Volunteer}{University of Birmingham}{UK}{
+		Worked in a team of 3 to achieve the Bronze level of the Green Impact scheme in the Computer science department\\
+		Informed students and teachers about the scheme and its benefits\\
+		Assessed other departments team and determined their level\\
+	}
+	
+	\timerange{September 2012 - June 2013}
+	\paraW{PASS leader}{University of Birmingham}{UK}{
+		Planned and scheduled study sessions within a team to support first year students and facilitate their learning\\
+	}
+	
+	\timerange{September 2011 - June 2013}
+	\paraW{Member}{Arts Society}{University of Birmingham}{
+		Strengthened creative approach to problems\\
+		Raised cultural awareness\\
+	}
+
+\end{body}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{changemargin}{-0.5in}{-0.5in}
+		\vspace{-2pt}
+		\scshape{ References are available on request.}
+\end{changemargin}
+
+
+\end{document}

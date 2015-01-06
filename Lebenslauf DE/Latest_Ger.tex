@@ -1,0 +1,301 @@
+\documentclass{article}
+\usepackage[
+  margin=1.5cm,
+  includefoot,
+  footskip=30pt,
+]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{setspace}
+\usepackage{hyperref}
+\definecolor{dark_grey}{gray}{0.6}
+\leftmargin=0.25cm
+\oddsidemargin=0.20in
+\textwidth=6.0in
+\topmargin=-0.6in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		%\scshape{\textbf{#1}}\\
+		\large \textsc{#1}\\
+		\vspace{-10pt}
+		\raggedright
+		\color{dark_grey}{\line(1,0){500}}
+		\smallskip
+	\end{changemargin}
+}
+
+\newcommand{\contact}[5]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		%\begin
+			\raggedleft
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\\ \smallskip
+			{#5}\bigskip
+		%\end
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{0in}{0in}
+  }	
+	{
+\end{changemargin}
+\medskip
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+\newcommand{\para}[4]{
+	\begin{minipage}[t]{0.6\linewidth}
+	\textbf{#1},\\
+	\textit{#2}
+	#3\\
+	#4
+	\end{minipage}
+	%\smallskip
+}
+
+\newcommand{\paraW}[4]{
+	\begin{minipage}[t]{0.6\textwidth}
+	\textbf{#1}, #2, #3 \vspace{2pt}\\
+	\begin{tabular}{p{10cm}}
+		#4
+	\end{tabular}
+	\end{minipage}
+	\medskip
+}
+
+\newcommand{\timerange}[1]{
+	\begin{minipage}[t]{0.30\textwidth}
+		#1
+	\end{minipage}
+}
+
+\renewcommand\labelitemi{--}
+
+%\newcommand{\}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Samirah Akibu Amadu}{Viehtriftgasse 12/4/19,\\ 1210, Wien}{Phone: 06818 4345206}{Email: amadu.samirah@yahoo.de}{LinkedIn: \href{http://uk.linkedin.com/pub/samirah-amadu/47/a8b/296/}{Samirah Amadu}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+\header{Persönliche Daten}
+\begin{body}
+	\vspace{14pt}
+	\begin{tabular}{p{4.5cm}lp{2cm}l}
+			Geburtsdatum: & 03. J{\"a}nner 1992\\
+			Geburtsort: & Wien\\
+			Familienstand: & Ledig\\
+		\end{tabular}\\
+\end{body}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Ausbildung}
+
+\begin{body}
+	\vspace{14pt}
+	\timerange{September 2011 -  laufend}
+	\para{BSc Computer Science with year in Industry}{University of Birmingham,}{UK\vspace{2pt}}{
+	Bachelorarbeit: Photogrammetrie\\
+	} \\
+
+	\timerange{September 2006 - Juni 2011}
+	\para{HTL Camillo Sitte Lehranstalt}{}{1030 Wien}{
+		Matura mit Auszeichnung\\
+		Fachrichtung Tiefbau
+	}
+
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Berufserfahrung}
+
+\begin{body}
+	\vspace{14pt}
+	
+	\timerange{September 2014 - laufend}
+	\paraW{Peer Assissted Study Sessions (PASS) Coordinator}{University of Birmingham}{Birmingham, UK}{
+		Organisiere und koordiniere Lerngruppen in verschiedenen Fakultäten, unter anderem Informatik, Mathematik und Mechanik.\\
+		Analysiere Einflussbereich der Lerngruppen und entwickle Verbesserungsvorschläge.
+	}\\
+	
+	\timerange{Juli 2013 - Juli 2014}
+	\paraW{WebSphere Liberty Profile Software Development Praktikantin}{IBM}{Hursley, UK}{
+		Entwickelte Software für die Integration von Liberty Profile in verschiedenen Cloud L{\"o}sungen.\\
+		Organisierte Weiterbildung f{\"u}r Praktikanten in Großbritannien und setze eine Team-struktur um, um die Produktivität zu verbessern.
+		Lehrte chinesischen Kollegen Englisch und Deutsch.\\
+	}\\
+	
+	\timerange{J{\"a}nner 2013 - Juli 2013}
+	\paraW{Student Ambassador}{University of Birmingham}{Birmingham, UK}{
+		Koordinierte Studenten auf Tagen der offenen Tür.	
+	}\\
+	
+	\timerange{April 2012 - Oktober 2012}
+	\paraW{IT Support Angestellte}{IT Services}{University of Birmingham, UK}{
+	%\begin{tabular}{l} %\itemsep -15pt  % reduce space between items
+		Kundensupport und Troubleshooting
+	%\end{tabular}
+	}\\
+
+	\timerange{August 2012}
+	\paraW{Verkäuferin}{Haschahof}{Wien, Austria}{
+	%\begin{tabular}{ll} %\itemsep -0pt  % reduce space between items
+		Hielt einen hohen Standard im Geschäft. \\ % (?)
+		Verkauf von biologischem Gemüse, Fleisch und Getränken. \\
+	%\end{tabular} \\
+	}
+	
+	\timerange{Februar 2012 - Juni 2012}
+	\paraW{ehrenamtliche Verkaufs Angestellte}{Barnardos}{Birmingham, UK}{
+		Verwaltete eingehenden und ausgehenden Vorrat.
+		EDV Support\\
+		An der Kassa trainiert.\\
+	}
+
+	\timerange{Juli 2012 \& September 2012}
+	\paraW{Praktikantin}{Ferro und Partner Ziviltechniker}{1050 Wien}{
+		Anforderungen der Kunden analysiert und dementsprechende Fassaden entworfen.\\
+		Beschwerden und Anfragen von Kunden bearbeitet.\\
+	}
+
+	\timerange{Juni 2011 - September 2011}
+	\paraW{Promoter}{Mrs. Sporty}{1050 Wien}{
+		Absolvierte Kundenbetreuungs training.\\
+		Promotion in verschiedenen Filialen.\\
+	}
+
+
+		\timerange{August 2011 - September 2011}
+	\paraW{Praktikantin}{Ferro und Partner Ziviltechniker}{1050 Wien}{
+		Fristgerechter Entwurf von Statik Pl{\"a}nen.\\
+		{\"U}berwachte Bauarbeiter um den Arbeitsverlauf zu beobachten.\\
+		Qualitätskontrollen an Baustellen.\\
+	}
+
+\end{body}
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{F{\"a}higkeiten}
+
+\begin{body}
+	%\raggedleft
+	\vspace{14pt}
+	\hspace{-10pt}
+	\begin{tabular}{p{4.37cm}ll}
+		\scshape{ \textbf{EDV Kenntnisse}} &   \\
+		\begin{tabular}{l} 
+		Java \\
+		HTML/CSS\\
+		C\\
+		\LaTeX\\
+		SQL\\
+		Linux\\
+		Ruby\\
+		\end{tabular} 
+		
+		&
+		
+		\begin{tabular}{l} 
+		sehr gut \\
+		sehr gut\\
+		gut\\
+		gut\\
+		gut\\
+		gut\\
+		gut\\
+		\end{tabular}\\
+
+	\hspace{-10pt}
+	\textsc{ \textbf{Sprachkenntnisse}}\\
+		\begin{tabular}{p{4.5cm}lp{2cm}l}
+			Deutsch & Muttersprache (C2)\\
+			Englisch & Fließend (C2)\\
+			Japanisch & Grundkenntnisse (B2)\\
+		\end{tabular}\\
+	\end{tabular}
+\end{body}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership
+\header{Au{\ss}erstudentische Activities}
+
+\begin{body}
+	\vspace{14pt}
+	\timerange{J{\"a}nner 2013 - Juni 2013}
+	\paraW{Green Impact Volunteer}{University of Birmingham}{UK}{
+		Arbeitete in einem Team und erreichte das Bronze Level des Green Impact Projects.\\
+		Informierte Studenten und Professoren über das Projekt und dessen Vorteile.
+		Beurteilte den Stand anderer  Fakultäten.\\
+	}
+	
+	\timerange{September 2012 - Juni 2013}
+	\paraW{Peer Assisted Study Session (PASS) Leader}{University of Birmingham}{UK}{
+		Plante und organisierte Lerngruppen innerhalb eines Teams und unterstützte Studenten im erstem Studienjahr.\\
+	}
+
+\end{body}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{changemargin}{-0.5in}{-0.5in}
+		\vspace{-2pt}
+		\scshape{ Referenzen auf Anfrage.}
+\end{changemargin}
+
+
+\end{document}
